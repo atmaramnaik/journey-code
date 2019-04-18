@@ -16,7 +16,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-@SupportedAnnotationTypes("com.atmaram.journey.coded.Journey")
+@SupportedAnnotationTypes("io.github.atmaramnaik.journey.coded.Journey")
 @SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class JourneyAnnotationProcessor extends AbstractProcessor {
     @Override
@@ -30,7 +30,7 @@ public class JourneyAnnotationProcessor extends AbstractProcessor {
         }
         Set<? extends Element> annotedElements=roundEnvironment.getElementsAnnotatedWith(Journey.class);
         Set<ExecutableElement> annotedMethods=ElementFilter.methodsIn(annotedElements);
-        String sPackage="com.atmaram.journey.coded";
+        String sPackage="io.github.atmaramnaik.journey.coded";
         List<String> commands=new ArrayList<>();
         for (ExecutableElement annotedMethod:annotedMethods
              ) {
@@ -51,9 +51,9 @@ public class JourneyAnnotationProcessor extends AbstractProcessor {
                 .append("import "+sPackage+".*;")
                 .append("public class Starter {")
                 .append("public static JourneyRegistry journeyRegistry=new JourneyRegistry();")
-                .append("public static void start(){")
+                .append("public static void start(String input){")
                 .append(String.join(" ",commands))
-                .append("Executor.runProgram(journeyRegistry);")
+                .append("Executor.runProgram(input,journeyRegistry);")
                 .append("}")
                 .append("}");
 

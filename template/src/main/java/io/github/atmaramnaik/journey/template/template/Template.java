@@ -9,14 +9,14 @@ import io.github.atmaramnaik.journey.template.template.expression.Expression;
 import io.github.atmaramnaik.journey.template.template.expression.Function;
 import io.github.atmaramnaik.journey.template.template.expression.Operation;
 import io.github.atmaramnaik.journey.template.template.expression.VariableExpression;
-import com.atmaram.journey.template.template.json.fillable.*;
-import com.atmaram.journey.template.template.json.fillable.extractable.*;
+import io.github.atmaramnaik.journey.template.template.json.fillable.*;
+import io.github.atmaramnaik.journey.template.template.json.fillable.extractable.*;
 import io.github.atmaramnaik.journey.template.template.json.fillable.*;
 import io.github.atmaramnaik.journey.template.template.json.fillable.extractable.*;
 import io.github.atmaramnaik.journey.template.template.text.SingleVariableTextTemplate;
 import io.github.atmaramnaik.journey.template.template.text.Text;
 import io.github.atmaramnaik.journey.template.template.text.TextTemplate;
-import com.atmaram.journey.template.template.text.internals.*;
+import io.github.atmaramnaik.journey.template.template.text.internals.*;
 import io.github.atmaramnaik.journey.template.template.text.internals.*;
 
 import java.util.ArrayList;

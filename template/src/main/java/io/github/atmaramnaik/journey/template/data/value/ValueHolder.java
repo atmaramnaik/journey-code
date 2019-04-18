@@ -1,7 +1,7 @@
 package io.github.atmaramnaik.journey.template.data.value;
 
 import io.github.atmaramnaik.journey.template.data.value.custom.JsonHolder;
-import com.atmaram.journey.template.data.value.primitive.*;
+import io.github.atmaramnaik.journey.template.data.value.primitive.*;
 import io.github.atmaramnaik.journey.template.data.value.primitive.IntegerHolder;
 import io.github.atmaramnaik.journey.template.data.value.primitive.LongHolder;
 import io.github.atmaramnaik.journey.template.data.value.primitive.ObjectHolder;

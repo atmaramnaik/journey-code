@@ -1,6 +1,6 @@
 package io.github.atmaramnaik.journey.http.rest.steps;
 
-import com.atmaram.journey.http.rest.steps.core.*;
+import io.github.atmaramnaik.journey.http.rest.steps.core.*;
 import io.github.atmaramnaik.journey.http.rest.steps.core.*;
 import io.github.atmaramnaik.journey.journey.Step;
 import io.github.atmaramnaik.journey.template.data.runtime.Context;
@@ -12,6 +12,7 @@ import io.github.atmaramnaik.journey.template.template.text.Text;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.mashape.unirest.request.HttpRequest;
+import static io.github.atmaramnaik.journey.template.template.Template.*;
 import lombok.Getter;
 
 import java.util.HashMap;

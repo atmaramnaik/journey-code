@@ -6,7 +6,8 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-
+import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.io.Helper.*;
 public class RestStepTest {
     @Test
     public void shouldGet() throws IOException {

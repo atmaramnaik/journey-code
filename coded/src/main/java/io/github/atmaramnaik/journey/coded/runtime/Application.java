@@ -4,10 +4,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public abstract class Application {
-    public void run(){
+    public void run(String input){
         try {
-            Method method=Class.forName(this.getClass().getPackage().getName()+".Starter").getMethod("start");
-            method.invoke(null);
+            Method method=Class.forName(this.getClass().getPackage().getName()+".Starter").getMethod("start",String.class);
+            method.invoke(null,input);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

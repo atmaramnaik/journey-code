@@ -2,13 +2,13 @@ repositories {
 
 }
 dependencies {
-    annotationProcessor project(':coded')
-    compile project(':http')
-    compile project(':coded')
+    annotationProcessor group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.1'    
+    compile group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.1'
+    compile group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.1'
 }
 jar {
     manifest {
-        attributes 'Main-Class': 'com.com.atmaram.journey.sample.Main'
+        attributes 'Main-Class': 'io.github.atmaramnaik.journey.sample.Main'
     }
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }

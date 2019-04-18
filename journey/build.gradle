@@ -1,6 +1,76 @@
+apply plugin: 'signing'
+apply plugin: 'maven'
 repositories {
 
 }
 dependencies {
-    compile project(':template')
+    compile group: 'io.github.atmaramnaik', name: 'journey-template', version: '0.0.1'
+}
+signing {
+    sign configurations.archives
+}
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+// Configure group ID, artifact ID, and version
+archivesBaseName = "journey-journey"
+version = "0.0.1"
+
+// Build, sign, and upload
+uploadArchives {
+    repositories {
+        mavenDeployer {
+
+            // Sign POM
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            // Destination
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            // Add required metadata to POM
+            pom.project {
+                name 'Journey Processing Library'
+                packaging 'jar'
+                description 'Core library for Workflows known as journeys configuration'
+                url 'https://atmaramnaik.github.io/journey'
+
+                scm {
+                    connection 'scm:git:https://github.com/atmaramnaik/journey-code.git'
+                    developerConnection 'scm:git:https://github.com/atmaramnaik/journey-code.git'
+                    url 'scm:git:https://github.com/atmaramnaik/journey-code.git/master'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'atmaramnaik'
+                        name 'Atmaram Naik'
+                        email 'naik_atmaram@yahoo.com'
+                        organization 'Thoughtworks'
+                        organizationUrl 'https://www.thoughtworks.com/'
+                    }
+                }
+            }
+        }
+    }
 }
