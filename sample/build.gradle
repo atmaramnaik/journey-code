@@ -1,0 +1,16 @@
+repositories {
+
+}
+dependencies {
+    annotationProcessor project(':coded')
+    compile project(':http')
+    compile project(':coded')
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.com.atmaram.journey.sample.Main'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

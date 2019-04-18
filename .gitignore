@@ -1,0 +1,14 @@
+build/
+out/
+.idea/
+.gradle/
+.DS_Store
+coded/.DS_Store
+journey/.DS_Store
+journey/src/.DS_Store
+journey/src/main/.DS_Store
+journey/src/main/java/.DS_Store
+template/.DS_Store
+template/src/.DS_Store
+template/src/main/.DS_Store
+template/src/main/java/.DS_Store

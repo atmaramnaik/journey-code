@@ -1,0 +1,30 @@
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '1.14'
+    id 'java'
+}
+
+allprojects {
+    apply plugin: 'idea'
+    group = 'io.github.atmaramnaik'
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'io.franzbecker.gradle-lombok'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    lombok { // optional: values below are the defaults
+        version = '1.18.4'
+        sha256 = ""
+    }
+    dependencies {
+        implementation "org.projectlombok:lombok:+"
+        testCompile group: 'org.assertj', name: 'assertj-core', version: '+'
+        testCompile group: 'org.mockito', name: 'mockito-core', version: '+'
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}

@@ -1,0 +1,26 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies{
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+		classpath('se.transmode.gradle:gradle-docker:1.2')
+	}
+}
+apply plugin: 'org.springframework.boot'
+repositories {
+	mavenCentral()
+}
+jar {
+	baseName = 'hosted'
+	version = '0.0.1'
+}
+
+dependencies {
+	compile project(':http')
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	compile("org.springframework.boot:spring-boot-starter-security")
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+}

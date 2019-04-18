@@ -1,0 +1,8 @@
+repositories {
+
+}
+dependencies {
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '+'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+
+}
