@@ -3,7 +3,7 @@ apply plugin: 'maven'
 repositories {
     
 }
-publishing = true
+//publishing = true
 dependencies {
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
     if(publishing){

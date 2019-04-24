@@ -3,7 +3,7 @@ apply plugin: 'maven'
 repositories {
 
 }
-publishing = true
+//publishing = true
 dependencies {
     compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
     if(publishing){

@@ -3,7 +3,7 @@ apply plugin: 'maven'
 repositories {
 
 }
-publishing = true
+//publishing = true
 dependencies {
     if(publishing){
         compile group: 'io.github.atmaramnaik', name: 'journey-template', version: apiVersion
