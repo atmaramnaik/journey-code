@@ -8,10 +8,10 @@ dependencies {
     compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
     if(publishing){
-        implementation group: 'io.github.atmaramnaik', name: 'journey-core', version: apiVersion
+        compile group: 'io.github.atmaramnaik', name: 'journey-core', version: apiVersion
     }
     else{
-        implementation project(':core')
+        compile project(':core')
     }
 }
 signing {
