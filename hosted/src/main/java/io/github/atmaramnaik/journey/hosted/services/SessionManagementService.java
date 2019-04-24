@@ -1,4 +1,5 @@
 package io.github.atmaramnaik.journey.hosted.services;
+import io.github.atmaramnaik.journey.hosted.JourneyApplication;
 import io.github.atmaramnaik.journey.hosted.model.Session;
 import io.github.atmaramnaik.journey.journey.JourneyManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +12,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 @Service
 public class SessionManagementService {
+    @Autowired
+    JourneyApplication journeyApp;
+
     public SessionManagementService() {
 //        users.put("<DM User Name>",new Session(new AtomicBoolean(false)));
     }
-
-    @Autowired
-    JourneyManager journeyManager;
 
     Map<String, Session> users=new HashMap<>();
     public Session getSession(String user){
@@ -53,7 +54,7 @@ public class SessionManagementService {
     public void startJourney(String input,String user){
         boolean exp=false;
         try {
-            journeyManager.start(input,users.get(user).webIO);
+            journeyApp.run(input,users.get(user).webIO);
         } catch (RuntimeException ex) {
             ex.printStackTrace();
             exp=true;

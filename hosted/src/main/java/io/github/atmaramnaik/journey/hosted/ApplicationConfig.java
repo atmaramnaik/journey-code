@@ -17,10 +17,6 @@ import org.springframework.security.core.AuthenticationException;
 
 import java.util.concurrent.Executor;
 
-import static io.github.atmaramnaik.journey.http.rest.steps.RestStep.*;
-import static io.github.atmaramnaik.journey.journey.Journey.journey;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
-
 
 @EnableAsync
 @Configuration
@@ -44,31 +40,9 @@ public class ApplicationConfig extends WebSecurityConfigurerAdapter {
         return executor;
     }
 
-    @Bean(name = "journeyManager")
-    public JourneyManager journeyManager(){
-        JourneyManager journeyManager=new JourneyManager();
-        journeyManager.add(journey()
-                .with(
-                        get(
-                                text(string("https://quotes.rest/qod")))
-                                .capture(object("contents",object("quotes",array(object("quote",xVar("quote"))))))
-                ).responding(text(
-                        string("Quote for now is: "),
-                        textEx(var("quote").ofType(String.class))
-                        )
-                )
-                .as("Get Random Quote"))
-                .add(journey()
-                        .with(
-                                get(text(string("http://api.icndb.com/jokes/random")))
-                                .capture(object("value",object("joke",xVar("joke"))))
-                        )
-                        .responding(text(
-                                string("Joke for now is: "),
-                                textEx(var("joke").ofType(String.class))
-                        )).as("Get Random joke")
-                );
-        return journeyManager;
+    @Bean(name = "journeyApp")
+    public JourneyApplication journeyApp(){
+        return new JourneyApplication();
     }
 
     @Override

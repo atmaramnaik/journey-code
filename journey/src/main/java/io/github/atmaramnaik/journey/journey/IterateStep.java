@@ -1,8 +1,8 @@
 package io.github.atmaramnaik.journey.journey;
 
-import io.github.atmaramnaik.journey.template.data.runtime.Context;
-import io.github.atmaramnaik.journey.template.data.value.primitive.IntegerHolder;
-import io.github.atmaramnaik.journey.template.io.IO;
+import io.github.atmaramnaik.journey.core.data.runtime.Context;
+import io.github.atmaramnaik.journey.core.data.value.primitive.IntegerHolder;
+import io.github.atmaramnaik.journey.core.io.IO;
 import io.github.atmaramnaik.journey.template.template.text.Text;
 
 import java.util.ArrayList;

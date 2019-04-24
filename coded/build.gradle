@@ -3,9 +3,14 @@ apply plugin: 'maven'
 repositories {
     
 }
-
+publishing = true
 dependencies {
-    compile group: 'io.github.atmaramnaik', name: 'journey-journey', version: '0.0.1'
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+    if(publishing){
+        compile group: 'io.github.atmaramnaik', name: 'journey-journey', version: apiVersion
+    } else {
+        compile project(':journey')
+    }
 }
 signing {
     sign configurations.archives
@@ -24,7 +29,7 @@ artifacts {
 
 // Configure group ID, artifact ID, and version
 archivesBaseName = "journey-coded"
-version = "0.0.1"
+version = apiVersion
 
 // Build, sign, and upload
 uploadArchives {

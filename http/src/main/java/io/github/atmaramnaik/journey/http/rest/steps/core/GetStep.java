@@ -1,8 +1,8 @@
 package io.github.atmaramnaik.journey.http.rest.steps.core;
 
 import io.github.atmaramnaik.journey.http.rest.steps.RestStep;
-import io.github.atmaramnaik.journey.template.data.runtime.Context;
-import io.github.atmaramnaik.journey.template.io.IO;
+import io.github.atmaramnaik.journey.core.data.runtime.Context;
+import io.github.atmaramnaik.journey.core.io.IO;
 import io.github.atmaramnaik.journey.template.template.text.Text;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.request.GetRequest;

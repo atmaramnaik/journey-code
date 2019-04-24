@@ -1,13 +1,13 @@
 package io.github.atmaramnaik.journey.http.rest.steps;
 
-import io.github.atmaramnaik.journey.template.data.runtime.Context;
-import io.github.atmaramnaik.journey.template.io.Helper;
+import io.github.atmaramnaik.journey.core.data.runtime.Context;
+import io.github.atmaramnaik.journey.core.io.Helper;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import static io.github.atmaramnaik.journey.template.template.Template.*;
-import static io.github.atmaramnaik.journey.template.io.Helper.*;
+import static io.github.atmaramnaik.journey.core.io.Helper.*;
 public class RestStepTest {
     @Test
     public void shouldGet() throws IOException {

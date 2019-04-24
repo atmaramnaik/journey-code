@@ -3,10 +3,16 @@ apply plugin: 'maven'
 repositories {
 
 }
+//publishing = true
 dependencies {
     compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
-
+    if(publishing){
+        implementation group: 'io.github.atmaramnaik', name: 'journey-core', version: apiVersion
+    }
+    else{
+        implementation project(':core')
+    }
 }
 signing {
     sign configurations.archives
@@ -25,7 +31,7 @@ artifacts {
 
 // Configure group ID, artifact ID, and version
 archivesBaseName = "journey-template"
-version = "0.0.1"
+version = apiVersion
 
 // Build, sign, and upload
 uploadArchives {

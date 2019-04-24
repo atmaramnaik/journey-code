@@ -1,10 +1,10 @@
 package io.github.atmaramnaik.journey.hosted.io;
 
 import io.github.atmaramnaik.journey.hosted.model.Session;
-import io.github.atmaramnaik.journey.template.data.value.DeSerializationException;
-import io.github.atmaramnaik.journey.template.data.value.ValueHolder;
-import io.github.atmaramnaik.journey.template.io.Reader;
-import io.github.atmaramnaik.journey.template.io.Writer;
+import io.github.atmaramnaik.journey.core.data.value.DeSerializationException;
+import io.github.atmaramnaik.journey.core.data.value.ValueHolder;
+import io.github.atmaramnaik.journey.core.io.Reader;
+import io.github.atmaramnaik.journey.core.io.Writer;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;

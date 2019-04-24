@@ -17,10 +17,13 @@ jar {
 }
 
 dependencies {
-	compile group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.1'
+//	compile project(':http')
+	implementation group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.2'
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.springframework.boot:spring-boot-starter-actuator")
 	compile("org.springframework.boot:spring-boot-starter-security")
+//	compile project(':coded')
+	implementation group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.2'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
 }

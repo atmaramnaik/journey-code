@@ -2,9 +2,8 @@ repositories {
 
 }
 dependencies {
-    annotationProcessor group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.1'    
-    compile group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.1'
-    compile group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.1'
+    compile group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.2'
+    compile group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.2'
 }
 jar {
     manifest {

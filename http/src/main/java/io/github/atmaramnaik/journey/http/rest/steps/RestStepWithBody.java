@@ -1,6 +1,6 @@
 package io.github.atmaramnaik.journey.http.rest.steps;
-import io.github.atmaramnaik.journey.template.data.runtime.Context;
-import io.github.atmaramnaik.journey.template.io.IO;
+import io.github.atmaramnaik.journey.core.data.runtime.Context;
+import io.github.atmaramnaik.journey.core.io.IO;
 import io.github.atmaramnaik.journey.template.template.Template;
 import io.github.atmaramnaik.journey.template.template.text.Text;
 import com.mashape.unirest.request.HttpRequestWithBody;
