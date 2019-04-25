@@ -1,4 +1,4 @@
-package io.github.atmaramnaik.journey.template.template.json.fillable;
+package io.github.atmaramnaik.journey.template.json.fillable;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.Json;
@@ -6,7 +6,7 @@ import io.github.atmaramnaik.journey.core.data.value.types.JsonArray;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
 import io.github.atmaramnaik.journey.core.data.variable.ListEveryVariable;
 import io.github.atmaramnaik.journey.core.data.variable.UserProvidedSizeListVariable;
-import io.github.atmaramnaik.journey.template.template.Template;
+import io.github.atmaramnaik.journey.template.Template;
 import lombok.Getter;
 
 import java.util.HashMap;

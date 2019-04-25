@@ -2,7 +2,7 @@ package io.github.atmaramnaik.journey.journey;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.io.IO;
-import io.github.atmaramnaik.journey.template.template.text.TextTemplate;
+import io.github.atmaramnaik.journey.template.text.TextTemplate;
 import lombok.Getter;
 import lombok.Setter;
 

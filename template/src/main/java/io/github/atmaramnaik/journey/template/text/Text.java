@@ -1,6 +1,6 @@
-package io.github.atmaramnaik.journey.template.template.text;
+package io.github.atmaramnaik.journey.template.text;
 
-import io.github.atmaramnaik.journey.template.template.Template;
+import io.github.atmaramnaik.journey.template.Template;
 
 public abstract class Text implements Template<String> {
 

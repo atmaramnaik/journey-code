@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 import static io.github.atmaramnaik.journey.core.io.Helper.*;
 public class RestStepTest {
     @Test

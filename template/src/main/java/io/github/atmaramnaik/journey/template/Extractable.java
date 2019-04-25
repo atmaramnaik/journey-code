@@ -1,4 +1,4 @@
-package io.github.atmaramnaik.journey.template.template;
+package io.github.atmaramnaik.journey.template;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.DeSerializationException;

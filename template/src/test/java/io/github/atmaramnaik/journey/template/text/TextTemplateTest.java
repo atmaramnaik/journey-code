@@ -1,7 +1,7 @@
 package io.github.atmaramnaik.journey.template.text;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
-import io.github.atmaramnaik.journey.template.template.text.TextTemplate;
+import io.github.atmaramnaik.journey.template.text.TextTemplate;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -14,7 +14,7 @@ import java.util.List;
 
 import static io.github.atmaramnaik.journey.core.io.Helper.*;
 import static org.assertj.core.api.Assertions.assertThat;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 
 public class TextTemplateTest {
     @Test

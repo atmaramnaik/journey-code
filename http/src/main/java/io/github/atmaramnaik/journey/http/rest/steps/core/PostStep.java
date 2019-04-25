@@ -3,8 +3,8 @@ package io.github.atmaramnaik.journey.http.rest.steps.core;
 import io.github.atmaramnaik.journey.http.rest.steps.RestStepWithBody;
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.io.IO;
-import io.github.atmaramnaik.journey.template.template.Template;
-import io.github.atmaramnaik.journey.template.template.text.Text;
+import io.github.atmaramnaik.journey.template.Template;
+import io.github.atmaramnaik.journey.template.text.Text;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.request.HttpRequestWithBody;
 

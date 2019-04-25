@@ -1,13 +1,13 @@
-package io.github.atmaramnaik.journey.template.template.json.fillable;
+package io.github.atmaramnaik.journey.template.json.fillable;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.Json;
 import io.github.atmaramnaik.journey.core.data.value.types.JsonObject;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
-import io.github.atmaramnaik.journey.template.template.Template;
-import io.github.atmaramnaik.journey.template.template.text.Text;
+import io.github.atmaramnaik.journey.template.Template;
+import io.github.atmaramnaik.journey.template.text.Text;
 
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 import java.util.HashMap;
 
 public class JsonObjectTemplate implements Template<Json> {

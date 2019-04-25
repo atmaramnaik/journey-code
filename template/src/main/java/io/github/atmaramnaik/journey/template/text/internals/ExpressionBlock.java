@@ -1,8 +1,8 @@
-package io.github.atmaramnaik.journey.template.template.text.internals;
+package io.github.atmaramnaik.journey.template.text.internals;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
-import io.github.atmaramnaik.journey.template.template.expression.Expression;
+import io.github.atmaramnaik.journey.template.expression.Expression;
 
 public class ExpressionBlock implements Block {
     Expression expression;

@@ -8,9 +8,9 @@ import io.github.atmaramnaik.journey.core.data.value.custom.JsonHolder;
 import io.github.atmaramnaik.journey.core.data.value.primitive.StringHolder;
 import io.github.atmaramnaik.journey.core.data.value.types.JsonArray;
 import io.github.atmaramnaik.journey.core.io.console.ConsoleIO;
-import io.github.atmaramnaik.journey.template.template.json.fillable.extractable.ExtractableVariableExpressionTemplate;
+import io.github.atmaramnaik.journey.template.json.fillable.extractable.ExtractableVariableExpressionTemplate;
 import org.junit.Test;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ExtractableVariableExpressionTemplateTest {

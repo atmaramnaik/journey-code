@@ -1,4 +1,4 @@
-package io.github.atmaramnaik.journey.template.template.json.fillable.extractable;
+package io.github.atmaramnaik.journey.template.json.fillable.extractable;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.DeSerializationException;
@@ -6,12 +6,12 @@ import io.github.atmaramnaik.journey.core.data.value.Json;
 import io.github.atmaramnaik.journey.core.data.value.custom.JsonHolder;
 import io.github.atmaramnaik.journey.core.data.value.types.JsonObject;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
-import io.github.atmaramnaik.journey.template.template.text.Text;
+import static io.github.atmaramnaik.journey.template.Template.*;
+import io.github.atmaramnaik.journey.template.text.Text;
 
 import java.util.HashMap;
 
-import static io.github.atmaramnaik.journey.template.template.Template.text;
+import static io.github.atmaramnaik.journey.template.Template.text;
 
 public class ExtractableJsonObjectTemplate implements ExtractableJsonTemplate<Json> {
     private ExtractableJsonObjectTemplate() {

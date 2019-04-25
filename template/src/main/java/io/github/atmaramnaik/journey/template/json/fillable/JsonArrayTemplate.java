@@ -1,10 +1,10 @@
-package io.github.atmaramnaik.journey.template.template.json.fillable;
+package io.github.atmaramnaik.journey.template.json.fillable;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.Json;
 import io.github.atmaramnaik.journey.core.data.value.types.JsonArray;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
-import io.github.atmaramnaik.journey.template.template.Template;
+import io.github.atmaramnaik.journey.template.Template;
 
 import java.util.HashMap;
 import java.util.List;

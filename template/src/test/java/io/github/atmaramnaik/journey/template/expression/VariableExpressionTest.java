@@ -7,14 +7,14 @@ import io.github.atmaramnaik.journey.core.data.value.primitive.StringHolder;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
 import io.github.atmaramnaik.journey.core.data.variable.Readable;
 import io.github.atmaramnaik.journey.core.data.variable.ValueHolderVariable;
-import io.github.atmaramnaik.journey.template.template.expression.VariableExpression;
+import io.github.atmaramnaik.journey.template.expression.VariableExpression;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 public class VariableExpressionTest {
     @Test
     public void shouldFillSingleIntegerVariable(){

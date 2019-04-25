@@ -1,8 +1,8 @@
-package io.github.atmaramnaik.journey.template.template.expression.operations;
+package io.github.atmaramnaik.journey.template.expression.operations;
 
 import io.github.atmaramnaik.journey.core.data.value.ValueHolder;
 import io.github.atmaramnaik.journey.core.data.value.primitive.StringHolder;
-import io.github.atmaramnaik.journey.template.template.expression.Operation;
+import io.github.atmaramnaik.journey.template.expression.Operation;
 
 import java.util.List;
 

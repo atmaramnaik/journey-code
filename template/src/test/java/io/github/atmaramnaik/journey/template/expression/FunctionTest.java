@@ -6,14 +6,14 @@ import io.github.atmaramnaik.journey.core.data.value.primitive.StringHolder;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
 import io.github.atmaramnaik.journey.core.data.variable.Readable;
 import io.github.atmaramnaik.journey.core.data.variable.ValueHolderVariable;
-import io.github.atmaramnaik.journey.template.template.expression.Function;
-import io.github.atmaramnaik.journey.template.template.expression.Operation;
+import io.github.atmaramnaik.journey.template.expression.Function;
+import io.github.atmaramnaik.journey.template.expression.Operation;
 import org.junit.Test;
 import java.util.HashMap;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 public class FunctionTest {
     Operation mockOperation=(List<ValueHolder> valueHolders)->{
         String ret="";

@@ -1,9 +1,16 @@
 repositories {
 
 }
+//publishing = true
 dependencies {
-    implementation group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.2'
-    implementation group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.2'
+    if(publishing){
+        implementation group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.2'
+        implementation group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.2'    
+    } else {
+        implementation project(':http')
+        implementation project(':coded')
+    }
+    
 }
 jar {
     manifest {

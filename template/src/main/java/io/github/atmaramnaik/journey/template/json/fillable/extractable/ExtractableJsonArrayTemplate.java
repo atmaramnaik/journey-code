@@ -1,4 +1,4 @@
-package io.github.atmaramnaik.journey.template.template.json.fillable.extractable;
+package io.github.atmaramnaik.journey.template.json.fillable.extractable;
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.DeSerializationException;
 import io.github.atmaramnaik.journey.core.data.value.Json;

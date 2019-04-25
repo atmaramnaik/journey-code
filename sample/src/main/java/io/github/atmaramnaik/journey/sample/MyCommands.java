@@ -4,7 +4,7 @@ import io.github.atmaramnaik.journey.journey.Journey;
 
 import static io.github.atmaramnaik.journey.journey.Journey.journey;
 import static io.github.atmaramnaik.journey.http.rest.steps.RestStep.*;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 
 //@Journey(name = "Hello")
 public class MyCommands {

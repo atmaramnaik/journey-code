@@ -6,13 +6,13 @@ import io.github.atmaramnaik.journey.journey.Step;
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.DeSerializationException;
 import io.github.atmaramnaik.journey.core.io.IO;
-import io.github.atmaramnaik.journey.template.template.Extractable;
-import io.github.atmaramnaik.journey.template.template.Template;
-import io.github.atmaramnaik.journey.template.template.text.Text;
+import io.github.atmaramnaik.journey.template.Extractable;
+import io.github.atmaramnaik.journey.template.Template;
+import io.github.atmaramnaik.journey.template.text.Text;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.mashape.unirest.request.HttpRequest;
-import static io.github.atmaramnaik.journey.template.template.Template.*;
+import static io.github.atmaramnaik.journey.template.Template.*;
 import lombok.Getter;
 
 import java.util.HashMap;

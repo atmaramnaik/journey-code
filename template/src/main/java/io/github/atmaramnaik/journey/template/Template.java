@@ -1,23 +1,23 @@
-package io.github.atmaramnaik.journey.template.template;
+package io.github.atmaramnaik.journey.template;
 
 import io.github.atmaramnaik.journey.core.data.runtime.Context;
 import io.github.atmaramnaik.journey.core.data.value.Json;
 import io.github.atmaramnaik.journey.core.data.value.ValueHolder;
 import io.github.atmaramnaik.journey.core.data.variable.HashMapVariable;
 import io.github.atmaramnaik.journey.core.io.IO;
-import io.github.atmaramnaik.journey.template.template.expression.Expression;
-import io.github.atmaramnaik.journey.template.template.expression.Function;
-import io.github.atmaramnaik.journey.template.template.expression.Operation;
-import io.github.atmaramnaik.journey.template.template.expression.VariableExpression;
-import io.github.atmaramnaik.journey.template.template.json.fillable.*;
-import io.github.atmaramnaik.journey.template.template.json.fillable.extractable.*;
-import io.github.atmaramnaik.journey.template.template.json.fillable.*;
-import io.github.atmaramnaik.journey.template.template.json.fillable.extractable.*;
-import io.github.atmaramnaik.journey.template.template.text.SingleVariableTextTemplate;
-import io.github.atmaramnaik.journey.template.template.text.Text;
-import io.github.atmaramnaik.journey.template.template.text.TextTemplate;
-import io.github.atmaramnaik.journey.template.template.text.internals.*;
-import io.github.atmaramnaik.journey.template.template.text.internals.*;
+import io.github.atmaramnaik.journey.template.expression.Expression;
+import io.github.atmaramnaik.journey.template.expression.Function;
+import io.github.atmaramnaik.journey.template.expression.Operation;
+import io.github.atmaramnaik.journey.template.expression.VariableExpression;
+import io.github.atmaramnaik.journey.template.json.fillable.*;
+import io.github.atmaramnaik.journey.template.json.fillable.extractable.*;
+import io.github.atmaramnaik.journey.template.json.fillable.*;
+import io.github.atmaramnaik.journey.template.json.fillable.extractable.*;
+import io.github.atmaramnaik.journey.template.text.SingleVariableTextTemplate;
+import io.github.atmaramnaik.journey.template.text.Text;
+import io.github.atmaramnaik.journey.template.text.TextTemplate;
+import io.github.atmaramnaik.journey.template.text.internals.*;
+import io.github.atmaramnaik.journey.template.text.internals.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
