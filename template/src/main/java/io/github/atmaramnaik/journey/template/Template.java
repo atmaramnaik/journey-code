@@ -41,6 +41,9 @@ public interface Template<T> {
     static JsonObjectTemplate object(){
         return new JsonObjectTemplate(new HashMap<>());
     }
+    static <T> StaticObjectTemplate<T> value(T value){
+        return new StaticObjectTemplate<>(value);
+    }
     static ChooseTemplate choose(String listName, String show, Template<Json> innerTemplate){
         return new ChooseTemplate(listName,show,innerTemplate);
     }

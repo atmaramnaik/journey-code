@@ -15,6 +15,10 @@ public class JsonArrayTemplate implements Template<Json> {
         elements.add(element);
         return this;
     }
+    public JsonArrayTemplate with(Object value){
+        elements.add(Template.value(value));
+        return this;
+    }
     public JsonArrayTemplate(List<Template<Json>> elements) {
         this.elements = elements;
     }

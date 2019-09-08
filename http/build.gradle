@@ -1,11 +1,11 @@
 repositories {
 
 }
-//publishing = true
+publishing = true
 dependencies {
     compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
     if(publishing){
-        compile group: 'io.github.atmaramnaik', name: 'journey-journey', version: '0.0.3'
+        compile group: 'io.github.atmaramnaik', name: 'journey-journey', version: '0.0.4'
     }
     else{
         compile project(':journey')
@@ -13,4 +13,10 @@ dependencies {
 }
 // Configure group ID, artifact ID, and version
 archivesBaseName = "journey-http"
-version = '0.0.3'
+version = '0.0.4'
+uploadArchives.repositories.mavenDeployer {
+    pom.project{
+        name = 'Http Module For Journeys'
+        description = 'Http Module For Processing Workflows known as journeys'
+    }
+}

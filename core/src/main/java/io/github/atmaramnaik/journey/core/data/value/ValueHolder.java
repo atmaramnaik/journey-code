@@ -2,10 +2,7 @@ package io.github.atmaramnaik.journey.core.data.value;
 
 import io.github.atmaramnaik.journey.core.data.value.custom.JsonHolder;
 import io.github.atmaramnaik.journey.core.data.value.custom.XmlHolder;
-import io.github.atmaramnaik.journey.core.data.value.primitive.IntegerHolder;
-import io.github.atmaramnaik.journey.core.data.value.primitive.LongHolder;
-import io.github.atmaramnaik.journey.core.data.value.primitive.ObjectHolder;
-import io.github.atmaramnaik.journey.core.data.value.primitive.StringHolder;
+import io.github.atmaramnaik.journey.core.data.value.primitive.*;
 import io.github.atmaramnaik.journey.core.data.value.types.Xml;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +12,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public abstract class ValueHolder<T> implements Serializable,Json {
-    static Map<Class,Class<? extends ValueHolder>> valueHolderMap=new LinkedHashMap<>();
+    public static Map<Class,Class<? extends ValueHolder>> valueHolderMap=new LinkedHashMap<>();
+    public static Map<Class,Class<? extends ValueHolder>> fallbackValueHolderMap =new LinkedHashMap<>();
     static Class<? extends ValueHolder> getAppropriateValueHolder(Class<?> tClass){
         for (Class<?> target:
                 valueHolderMap.keySet()) {
@@ -23,15 +21,24 @@ public abstract class ValueHolder<T> implements Serializable,Json {
                 return valueHolderMap.get(target);
             }
         }
+        for (Class<?> target:
+                fallbackValueHolderMap.keySet()) {
+            if(target.isAssignableFrom(tClass)){
+                return fallbackValueHolderMap.get(target);
+            }
+        }
         return null;
     }
     static {
         valueHolderMap.put(Long.class, LongHolder.class);
         valueHolderMap.put(Integer.class, IntegerHolder.class);
+        valueHolderMap.put(Boolean.class, BooleanHolder.class);
+        valueHolderMap.put(Float.class, FloatHolder.class);
+        valueHolderMap.put(Double.class, DoubleHolder.class);
         valueHolderMap.put(String.class, StringHolder.class);
-        valueHolderMap.put(Xml.class, XmlHolder.class);
-        valueHolderMap.put(Json.class, JsonHolder.class);
-        valueHolderMap.put(Object.class, ObjectHolder.class);
+        fallbackValueHolderMap.put(Xml.class, XmlHolder.class);
+        fallbackValueHolderMap.put(Json.class, JsonHolder.class);
+        fallbackValueHolderMap.put(Object.class, ObjectHolder.class);
     }
     @Getter
     @Setter

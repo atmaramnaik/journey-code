@@ -15,7 +15,7 @@ jar {
 	baseName = 'hosted'
 	version = '0.0.1'
 }
-//publishing = true
+publishing = false
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.springframework.boot:spring-boot-starter-actuator")
@@ -23,8 +23,8 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
 	if(publishing){
-		implementation group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.2'
-		implementation group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.2'
+		implementation group: 'io.github.atmaramnaik', name: 'journey-http', version: '0.0.4'
+		implementation group: 'io.github.atmaramnaik', name: 'journey-coded', version: '0.0.4'
 	} else {
 		compile project(':http')
 		compile project(':coded')

@@ -24,6 +24,10 @@ public class JsonObjectTemplate implements Template<Json> {
         pairs.put(text(string(key)),value);
         return this;
     }
+    public JsonObjectTemplate with(String key,Object value){
+        pairs.put(text(string(key)),value(value));
+        return this;
+    }
     @Override
     public Json fillReturnValue(Context context) {
         JsonObject jsonObject=new JsonObject();
