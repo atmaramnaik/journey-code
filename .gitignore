@@ -14,3 +14,5 @@ template/src/main/.DS_Store
 template/src/main/java/.DS_Store
 gradle.properties
 *.iml
+*.ipr
+*.iws

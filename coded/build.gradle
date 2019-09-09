@@ -5,14 +5,14 @@ publishing = true
 dependencies {
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
     if(publishing){
-        compile group: 'io.github.atmaramnaik', name: 'journey-journey', version: '0.0.4'
+        compile group: 'io.github.atmaramnaik', name: 'journey-journey', version: '0.0.5'
     } else {
         compile project(':journey')
     }
 }
 // Configure group ID, artifact ID, and version
 archivesBaseName = "journey-coded"
-version = '0.0.4'
+version = '0.0.5'
 uploadArchives.repositories.mavenDeployer {
     pom.project{
         name = 'Coded Journey Helper Library'

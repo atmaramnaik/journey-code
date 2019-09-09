@@ -27,7 +27,14 @@ public class ExtractableVariableExpressionTemplate implements ExtractableJsonTem
     public HashMap<String, Object> extract(Context context, Json data) {
         HashMap<String,Object> hashMap=new HashMap<>();
         if(data instanceof ValueHolder) {
-            hashMap.put(variableExpression.getVariableName(), ((ValueHolder)data).getValue());
+            ValueHolder valueHolder = ValueHolder.getNewValueHolderForType(variableExpression.getVariableType());
+            try {
+                valueHolder.deSerialize(data.jsonSerialize());
+            } catch (DeSerializationException e) {
+                e.printStackTrace();
+            }
+
+            hashMap.put(variableExpression.getVariableName(), valueHolder.getValue());
         }
         return hashMap;
     }

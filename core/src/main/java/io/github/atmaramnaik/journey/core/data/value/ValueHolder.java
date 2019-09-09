@@ -55,6 +55,9 @@ public abstract class ValueHolder<T> implements Serializable,Json {
         return String.class;
     }
     public static <T> ValueHolder getNewValueHolderFor(T data){
+        if(data==null){
+            return new NullHolder();
+        }
         ValueHolder valueHolder= null;
         try {
             valueHolder = getAppropriateValueHolder(data.getClass()).getConstructor().newInstance();

@@ -1,24 +1,40 @@
 repositories {
 
 }
+apply plugin: 'antlr'
 publishing = true
 dependencies {
+    antlr "org.antlr:antlr4:4.7.1"
     compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile "org.antlr:antlr4-runtime:4.7.1"
+
     if(publishing){
-        compile group: 'io.github.atmaramnaik', name: 'journey-core', version: '0.0.3'
+        compile group: 'io.github.atmaramnaik', name: 'journey-core', version: '0.0.4'
     }
     else{
         compile project(':core')
     }
 }
 
+
 // Configure group ID, artifact ID, and version
 archivesBaseName = "journey-template"
-version = '0.0.4'
+version = '0.0.5'
 uploadArchives.repositories.mavenDeployer {
     pom.project{
         name = 'Template Processing Library'
         description = 'Core library for Templating and reverse templating json,xml text or user defined content types'
+    }
+}
+generateGrammarSource {
+    maxHeapSize = "64m"
+    arguments += ['-package', 'io.github.atmaramnaik.journey.template']
+    arguments += ['-visitor']
+    outputDirectory = new File("${buildDir}/generated-src/antlr/main/io/github/atmaramnaik/journey/template".toString())
+}
+idea {
+    module {
+        sourceDirs += file("generated-src/antlr/main")
     }
 }

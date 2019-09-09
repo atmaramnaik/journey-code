@@ -18,7 +18,11 @@ import io.github.atmaramnaik.journey.template.text.Text;
 import io.github.atmaramnaik.journey.template.text.TextTemplate;
 import io.github.atmaramnaik.journey.template.text.internals.*;
 import io.github.atmaramnaik.journey.template.text.internals.*;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
 
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,7 +41,48 @@ public interface Template<T> {
         return getRequiredDataVariables(context);
     }
 
-
+    static Template<Json> json(String template){
+        TLexer tLexer=new TLexer(CharStreams.fromString(template));
+        CommonTokenStream tokens=new CommonTokenStream(tLexer);
+        TParser parser=new TParser(tokens);
+        JsonTemplateVisitor jsonVisitor = new JsonTemplateVisitor();
+        return jsonVisitor.visit(parser.json());
+    }
+    static Template<Json> json(File file) throws IOException {
+        TLexer tLexer=new TLexer(CharStreams.fromFileName(file.getName()));
+        CommonTokenStream tokens=new CommonTokenStream(tLexer);
+        TParser parser=new TParser(tokens);
+        JsonTemplateVisitor jsonVisitor = new JsonTemplateVisitor();
+        return jsonVisitor.visit(parser.json());
+    }
+    static Template<Json> json(InputStream inputStream) throws IOException {
+        TLexer tLexer=new TLexer(CharStreams.fromStream(inputStream));
+        CommonTokenStream tokens=new CommonTokenStream(tLexer);
+        TParser parser=new TParser(tokens);
+        JsonTemplateVisitor jsonVisitor = new JsonTemplateVisitor();
+        return jsonVisitor.visit(parser.json());
+    }
+    static ExtractableJsonTemplate<Json> xJson(String template){
+        TLexer tLexer=new TLexer(CharStreams.fromString(template));
+        CommonTokenStream tokens=new CommonTokenStream(tLexer);
+        TParser parser=new TParser(tokens);
+        XJsonTemplateVisitor jsonVisitor = new XJsonTemplateVisitor();
+        return jsonVisitor.visit(parser.xJson());
+    }
+    static ExtractableJsonTemplate<Json> xJson(File file) throws IOException {
+        TLexer tLexer=new TLexer(CharStreams.fromFileName(file.getName()));
+        CommonTokenStream tokens=new CommonTokenStream(tLexer);
+        TParser parser=new TParser(tokens);
+        XJsonTemplateVisitor jsonVisitor = new XJsonTemplateVisitor();
+        return jsonVisitor.visit(parser.xJson());
+    }
+    static ExtractableJsonTemplate<Json> xJson(InputStream inputStream) throws IOException {
+        TLexer tLexer=new TLexer(CharStreams.fromStream(inputStream));
+        CommonTokenStream tokens=new CommonTokenStream(tLexer);
+        TParser parser=new TParser(tokens);
+        XJsonTemplateVisitor jsonVisitor = new XJsonTemplateVisitor();
+        return jsonVisitor.visit(parser.xJson());
+    }
     static JsonObjectTemplate object(){
         return new JsonObjectTemplate(new HashMap<>());
     }

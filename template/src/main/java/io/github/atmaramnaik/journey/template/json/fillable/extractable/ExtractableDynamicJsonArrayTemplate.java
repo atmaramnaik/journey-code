@@ -14,7 +14,9 @@ import java.util.List;
 public class ExtractableDynamicJsonArrayTemplate implements ExtractableJsonTemplate<Json> {
     @Override
     public ExtractableDynamicJsonArrayTemplate fillReturnValue(Context context) {
-        return this;
+        ExtractableDynamicJsonArrayTemplate extractableDynamicJsonArrayTemplate=new ExtractableDynamicJsonArrayTemplate(listVariable);
+        extractableDynamicJsonArrayTemplate.elementTemplate = this.elementTemplate.fillReturnValue(context);
+        return extractableDynamicJsonArrayTemplate;
     }
     @Override
     public HashMapVariable getRequiredDataVariables(Context context) {
